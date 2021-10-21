@@ -5,13 +5,15 @@ export const Image = styled.img`
     height: 100%;
     max-width: 720px;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: ${({ clickable }) => clickable ? '20px' : '20px 0 0 20px'};
     transition: all 0.3s;
     animation: animateThumb 0.5s;
 
-    :hover {
-        opacity: 0.8;
-    }
+    ${({ clickable }) => {
+        return clickable
+            ? ':hover {opacity: 0.8;}'
+            : '@media (max-width: 768px) {border-radius: 20px 20px 0 0}';
+    }}
 
     @keyframes animateThumb {
         from {opacity: 0;}
