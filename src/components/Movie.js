@@ -9,6 +9,7 @@ import Breadcrumbs from './Breadcrumbs';
 import MovieInfo from './MovieInfo';
 import MovieInfoBar from './MovieInfoBar';
 import Grid from './Grid';
+import Actor from './Actor';
 import Spinner from './Spinner';
 
 // Hooks
@@ -33,6 +34,18 @@ const Movie = () => {
                 budget={movie.budget}
                 revenue={movie.revenue}
             />
+            <Grid header='Actors'>
+                {movie.actors.map(actor => (
+                    <Actor
+                        imageUrl={actor.profile_path
+                            ? `${IMAGE_BASE_URL}${POSTER_SIZE}${actor.profile_path}`
+                            : NoImage
+                        }
+                        name={actor.name}
+                        character={actor.character}
+                    />
+                ))}
+            </Grid>
         </>
     );
 };
