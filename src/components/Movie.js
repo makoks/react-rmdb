@@ -7,6 +7,7 @@ import { IMAGE_BASE_URL, POSTER_SIZE } from '../config';
 // Components
 import Breadcrumbs from './Breadcrumbs';
 import MovieInfo from './MovieInfo';
+import MovieInfoBar from './MovieInfoBar';
 import Grid from './Grid';
 import Spinner from './Spinner';
 
@@ -27,6 +28,11 @@ const Movie = () => {
         <>
             <Breadcrumbs movieTitle={movie.title} />
             <MovieInfo movie={movie} />
+            <MovieInfoBar
+                time={movie.runtime}
+                budget={movie.budget}
+                revenue={movie.revenue}
+            />
         </>
     );
 };
