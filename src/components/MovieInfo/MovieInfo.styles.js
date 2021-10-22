@@ -26,9 +26,17 @@ export const Content = styled.div`
     margin: 0 auto;
     border-radius: 20px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         display: block;
         max-height: none;
+    }
+
+    img {
+        border-radius: 20px 20px 0 0;
+
+        @media (min-width: 768px) {
+            border-radius: 20px 0 0 20px;
+        }
     }
 `;
 
@@ -65,7 +73,7 @@ export const Text = styled.div`
     }
 
     h1 {
-        @media (max-width: 768) {
+        @media (max-width: 767) {
             font-size: var(--fontBig);
         }
     }
