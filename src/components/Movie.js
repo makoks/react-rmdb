@@ -37,6 +37,7 @@ const Movie = () => {
             <Grid header='Actors'>
                 {movie.actors.map(actor => (
                     <Actor
+                        key={actor.id}
                         imageUrl={actor.profile_path
                             ? `${IMAGE_BASE_URL}${POSTER_SIZE}${actor.profile_path}`
                             : NoImage
