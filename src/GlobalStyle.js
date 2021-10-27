@@ -30,16 +30,22 @@ export const GlobalStyle = createGlobalStyle`
             font-size: 2rem;
             font-weight: 600;
             color: var(--white);
+            margin-top: 0.67rem;
+            margin-bottom: 0.67rem;
         }
 
         h3 {
             font-size: 1.1rem;
-            font-weght: 600;
+            font-weight: 600;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
 
         p {
             font-size: 1rem;
             color: var(--white);
+            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
     }
 `
